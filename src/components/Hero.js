@@ -94,8 +94,8 @@ const Hero = () => {
               <button ref={contactBtnRef} className="btn-secondary glass-card btn-animated" onClick={handleContact}>Contact Me</button>
             </div>
             <div className="mt-12 glass-card p-6 inline-block">
-              <p className="text-4xl font-bold text-f1-gold">5+</p>
-              <p className="text-f1-white/80">Years of Experience</p>
+              <p className="text-4xl font-bold text-f1-gold">Final Year</p>
+              <p className="text-f1-white/80">Computer Science Student</p>
             </div>
           </div>
           
