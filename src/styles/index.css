@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-f1-black text-f1-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-f1-gray/30 backdrop-blur-glass border border-f1-white/10 rounded-lg;
+  }
+  
+  .nav-link {
+    @apply text-f1-white hover:text-f1-red transition-colors duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-f1-red text-f1-white px-6 py-2 rounded-md hover:bg-f1-red/80 transition-colors duration-300 shadow-lg backdrop-blur-glass;
+  }
+  
+  .btn-secondary {
+    @apply border border-f1-white text-f1-white px-6 py-2 rounded-md hover:bg-f1-white/10 transition-colors duration-300 shadow-lg backdrop-blur-glass;
+  }
+  
+  .btn-animated {
+    transition: box-shadow 0.2s, transform 0.2s;
+    will-change: transform, box-shadow;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-f1-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-f1-red rounded-full;
+}
+
+/* Custom cursor */
+.custom-cursor {
+  @apply fixed w-8 h-8 rounded-full border-2 border-f1-red pointer-events-none z-50 transition-transform duration-100;
+}
+
+/* Dynamic gradient animation */
+@keyframes gradient-move {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient-move {
+  background: linear-gradient(120deg, #15151E 0%, #1E1E1E 40%, #E10600 100%);
+  background-size: 200% 200%;
+  animation: gradient-move 8s ease-in-out infinite;
+} 
