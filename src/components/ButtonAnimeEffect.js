@@ -9,7 +9,7 @@ const ButtonAnimeEffect = () => {
         anime({
           targets: btn,
           scale: 1.08,
-          boxShadow: '0 0 16px 2px #E10600AA',
+          boxShadow: '0 0 16px 2px #00A19BAA',
           duration: 200,
           easing: 'easeOutQuad',
         });
@@ -18,7 +18,7 @@ const ButtonAnimeEffect = () => {
         anime({
           targets: btn,
           scale: 1,
-          boxShadow: '0 0 0 0 #E1060000',
+          boxShadow: '0 0 0 0 #00A19B00',
           duration: 200,
           easing: 'easeOutQuad',
         });

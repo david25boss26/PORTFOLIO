@@ -186,7 +186,7 @@ const Contact = () => {
                 {status.loading ? 'Sending...' : 'Send Message'}
               </button>
               {status.message && (
-                <p className={`text-center ${status.success ? 'text-green-500' : 'text-red-500'}`}>
+                <p className={`text-center ${status.success ? 'text-green-500' : 'text-mercedes-teal/80'}`}>
                   {status.message}
                 </p>
               )}

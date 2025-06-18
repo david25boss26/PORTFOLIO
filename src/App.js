@@ -60,7 +60,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen w-full bg-gradient-to-br from-f1-black via-f1-gray to-f1-red/80 animate-gradient-move relative overflow-x-hidden">
+      <div className="min-h-screen w-full bg-gradient-to-br from-mercedes-black via-mercedes-dark-gray to-mercedes-teal/80 animate-gradient-move relative overflow-x-hidden">
         <CustomCursor />
         <ButtonAnimeEffect />
         <Navbar />
