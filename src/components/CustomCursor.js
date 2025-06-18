@@ -56,10 +56,9 @@ const CustomCursor = () => {
           scale: isHovering ? 1.5 : 1,
         }}
         transition={{
-          type: 'spring',
-          stiffness: 300,
-          damping: 20,
-          mass: 0.1,
+          type: 'tween',
+          duration: 0.08,
+          ease: 'linear',
         }}
       />
       <motion.div
@@ -71,10 +70,9 @@ const CustomCursor = () => {
           scale: isHovering ? 0.5 : 1,
         }}
         transition={{
-          type: 'spring',
-          stiffness: 300,
-          damping: 20,
-          mass: 0.1,
+          type: 'tween',
+          duration: 0.08,
+          ease: 'linear',
         }}
       />
     </>
