@@ -5,6 +5,10 @@
 @layer base {
   body {
     @apply bg-mercedes-black text-mercedes-white scroll-smooth;
+    overscroll-behavior: none;
+    scrollbar-width: thin;
+    scrollbar-color: #00A19B #23292F;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -59,6 +63,30 @@
     transition: box-shadow 0.2s, transform 0.2s;
     will-change: transform, box-shadow;
   }
+}
+
+section {
+  box-shadow: 0 2px 32px 0 #00A19B11;
+  border-radius: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.glass-card:hover {
+  box-shadow: 0 8px 32px 0 #00A19B33, 0 2px 0 0 #ffffff33 inset;
+  border-color: #00A19B44;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  transform: translateY(-2px) scale(1.02);
+}
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
+/* Custom scrollbar for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00A19B #23292F;
 }
 
 /* Custom scrollbar */
