@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import anime from 'animejs';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const socialLinks = [
   {
@@ -26,6 +27,18 @@ const Contact = () => {
   const rightRef = useRef(null);
   const sectionRef = useRef(null);
   const [showFloating, setShowFloating] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [status, setStatus] = useState({
+    loading: false,
+    success: false,
+    error: false,
+    message: ''
+  });
 
   useEffect(() => {
     anime({
@@ -55,6 +68,49 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus({ loading: true, success: false, error: false, message: '' });
+
+    try {
+      await emailjs.send(
+        'service_9zb9es8',
+        'template_8levclt',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'David Sharma',
+          reply_to: formData.email,
+        },
+        'T0GS073AWaWEmYI0n'
+      );
+
+      setStatus({
+        loading: false,
+        success: true,
+        error: false,
+        message: 'Message sent successfully!'
+      });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      setStatus({
+        loading: false,
+        success: false,
+        error: true,
+        message: 'Failed to send message. Please try again.'
+      });
+    }
+  };
+
   return (
     <section className="py-20 relative" id="contact-section" ref={sectionRef}>
       <div className="container mx-auto px-4">
@@ -73,35 +129,67 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           <div ref={leftRef} className="glass-card p-8 opacity-0 translate-y-8">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium mb-2">Name</label>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-2 bg-f1-gray/30 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red"
-                  placeholder="Your name"
-                  defaultValue="David Sharma"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 bg-f1-black/40 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Email</label>
+                <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
                 <input
                   type="email"
-                  className="w-full px-4 py-2 bg-f1-gray/30 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red"
-                  placeholder="Your email"
-                  defaultValue="sharmadavid2004@gmail.com"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 bg-f1-black/40 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Message</label>
-                <textarea
-                  className="w-full px-4 py-2 bg-f1-gray/30 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red h-32"
-                  placeholder="Your message"
+                <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 bg-f1-black/40 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red"
                 />
               </div>
-              <button type="submit" className="btn-primary glass-card btn-animated w-full">
-                Send Message
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="4"
+                  className="w-full px-4 py-2 bg-f1-black/40 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                disabled={status.loading}
+                className="btn-primary glass-card w-full py-3"
+              >
+                {status.loading ? 'Sending...' : 'Send Message'}
               </button>
+              {status.message && (
+                <p className={`text-center ${status.success ? 'text-green-500' : 'text-red-500'}`}>
+                  {status.message}
+                </p>
+              )}
             </form>
           </div>
 
@@ -139,7 +227,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="glass-card p-8 flex flex-col items-center">
+            <div className="glass-card p-8">
               <h3 className="text-2xl font-bold mb-6">Follow Me</h3>
               <div className="flex gap-6 justify-center">
                 {socialLinks.map((s) => (
