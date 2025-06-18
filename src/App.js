@@ -12,6 +12,7 @@ import AsideBar from './components/AsideBar';
 import ProjectsPage from './pages/ProjectsPage';
 import RightSocialBar from './components/RightSocialBar';
 import ButtonAnimeEffect from './components/ButtonAnimeEffect';
+import Timeline from './components/Timeline';
 import anime from 'animejs';
 
 function AnimatedRoutes() {
@@ -39,6 +40,7 @@ function AnimatedRoutes() {
               <Hero />
               <Services />
               <Projects />
+              <Timeline />
               <About />
               <Contact />
             </>

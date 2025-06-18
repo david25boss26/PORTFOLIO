@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-f1-black text-f1-white;
+    @apply bg-f1-black text-f1-white scroll-smooth;
   }
 }
 
