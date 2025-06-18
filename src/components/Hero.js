@@ -80,11 +80,13 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center pt-20">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="container max-w-screen-xl w-full mx-auto px-2 sm:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div ref={leftRef} className="opacity-0 translate-y-8">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Hi, I'm <span className="text-mercedes-teal">David Sharma</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <span>Hi, I'm</span><br />
+              <span className="text-mercedes-teal block">David</span>
+              <span className="text-mercedes-teal block">Sharma</span>
             </h1>
             <p className="text-lg text-mercedes-silver mb-8">
               Welcome to my portfolio. Explore my projects, skills, and experience in software development and engineering.
@@ -104,7 +106,7 @@ const Hero = () => {
               <img
                 src={process.env.PUBLIC_URL + '/david-sharma.jpg'}
                 alt="David Sharma"
-                className="w-full h-auto rounded-lg object-cover"
+                className="w-full max-w-full h-auto rounded-lg object-cover"
                 style={{ maxHeight: 480 }}
                 onError={e => { e.target.onerror = null; e.target.src = 'https://via.placeholder.com/400x480?text=No+Image'; }}
               />

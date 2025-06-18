@@ -34,7 +34,7 @@ function AnimatedRoutes() {
 
   return (
     <div ref={mainRef} key={location.pathname} style={{ opacity: 0 }}>
-      <main className="container mx-auto px-4 lg:pl-32 pt-24">
+      <main className="container max-w-screen-xl w-full mx-auto px-2 sm:px-4 lg:pl-32 pt-24">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={
             <>

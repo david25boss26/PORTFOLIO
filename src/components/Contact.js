@@ -113,7 +113,7 @@ const Contact = () => {
 
   return (
     <section className="py-20 relative" id="contact-section" ref={sectionRef}>
-      <div className="container mx-auto px-4">
+      <div className="container max-w-screen-xl w-full mx-auto px-2 sm:px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -127,8 +127,8 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div ref={leftRef} className="glass-card p-8 opacity-0 translate-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <div ref={leftRef} className="glass-card p-8 w-full opacity-0 translate-y-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
@@ -193,7 +193,7 @@ const Contact = () => {
             </form>
           </div>
 
-          <div ref={rightRef} className="space-y-8 opacity-0 translate-y-8">
+          <div ref={rightRef} className="space-y-8 w-full opacity-0 translate-y-8">
             <div className="glass-card p-8">
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <div className="space-y-4">
@@ -253,7 +253,7 @@ const Contact = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: showFloating ? 1 : 0, y: showFloating ? 0 : 100 }}
         transition={{ duration: 0.5 }}
-        className="fixed bottom-8 right-8 glass-card p-4 hidden md:block pointer-events-none"
+        className="fixed bottom-8 right-8 glass-card p-4 hidden lg:block pointer-events-none"
         style={{ zIndex: 60 }}
       >
         <div className="flex items-center space-x-4">

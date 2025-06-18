@@ -126,7 +126,7 @@ const TimelineItem = ({ data, index, isLast }) => {
 const Timeline = () => {
   return (
     <section className="py-20 relative">
-      <div className="container mx-auto px-2 md:px-4">
+      <div className="container max-w-screen-xl w-full mx-auto px-2 md:px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

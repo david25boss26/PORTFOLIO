@@ -83,8 +83,8 @@ const About = () => {
 
   return (
     <section className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+      <div className="container max-w-screen-xl w-full mx-auto px-2 sm:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
           <div ref={leftRef} className="opacity-0 translate-y-8">
             <h2 className="text-4xl font-bold mb-8">About Me</h2>
             <p className="text-mercedes-silver mb-8 text-lg">
@@ -101,9 +101,9 @@ const About = () => {
 
           <div
             ref={rightRef}
-            className="flex flex-col md:flex-row gap-8 opacity-0 translate-y-8 w-full max-w-full"
+            className="flex flex-col md:flex-row gap-6 md:gap-8 opacity-0 translate-y-8 w-full max-w-full"
           >
-            <div className="glass-card p-8 flex-1 min-w-[220px] max-w-full md:max-w-[340px] mx-auto flex flex-col shadow-lg">
+            <div className="glass-card p-8 flex-1 min-w-[180px] max-w-full md:max-w-[340px] mx-auto flex flex-col shadow-lg">
               <div className="flex items-center gap-2 mb-4">
                 <FaCode className="text-mercedes-teal text-2xl" />
                 <h3 className="text-2xl font-bold">Programming Skills</h3>
@@ -112,7 +112,7 @@ const About = () => {
                 <SkillBar key={skill.name} skill={skill} id={`prog-skill-${idx}`} />
               ))}
             </div>
-            <div className="glass-card p-8 flex-1 min-w-[220px] max-w-full md:max-w-[340px] mx-auto flex flex-col shadow-lg">
+            <div className="glass-card p-8 flex-1 min-w-[180px] max-w-full md:max-w-[340px] mx-auto flex flex-col shadow-lg">
               <div className="flex items-center gap-2 mb-4">
                 <FaCogs className="text-mercedes-teal text-2xl" />
                 <h3 className="text-2xl font-bold">Technical Skills</h3>
