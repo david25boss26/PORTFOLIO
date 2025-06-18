@@ -60,18 +60,18 @@ const TimelineItem = ({ data, index, isLast }) => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={variants}
-            whileHover={{ scale: 1.03, boxShadow: '0 4px 24px #E1060033' }}
+            whileHover={{ scale: 1.03, boxShadow: '0 4px 24px #00A19B33' }}
             className="glass-card p-6 relative transition-all duration-300 cursor-pointer hover:shadow-2xl w-full max-w-xl text-right"
           >
-            <div className="absolute -top-6 right-8 w-10 h-10 glass-card rounded-full flex items-center justify-center text-2xl border-2 border-f1-red bg-f1-black z-20">
+            <div className="absolute -top-6 right-8 w-10 h-10 glass-card rounded-full flex items-center justify-center text-2xl border-2 border-mercedes-teal bg-mercedes-black z-20">
               {data.icon}
             </div>
-            <h3 className="text-2xl font-bold mb-2 text-f1-red">{data.title}</h3>
-            <p className="text-f1-gold mb-2 font-semibold">{data.location}</p>
-            <p className="text-f1-white/80 mb-2 whitespace-pre-line">{data.description}</p>
+            <h3 className="text-2xl font-bold mb-2 text-mercedes-teal">{data.title}</h3>
+            <p className="text-mercedes-silver mb-2 font-semibold">{data.location}</p>
+            <p className="text-mercedes-silver mb-2 whitespace-pre-line">{data.description}</p>
             <div className="flex flex-wrap gap-2 mt-2 justify-end">
               {data.tech && data.tech.map((tech) => (
-                <span key={tech} className="text-xs bg-f1-red/80 text-f1-white px-2 py-1 rounded-md font-semibold shadow">
+                <span key={tech} className="text-xs bg-mercedes-teal/80 text-mercedes-black px-2 py-1 rounded-md font-semibold shadow">
                   {tech}
                 </span>
               ))}
@@ -82,15 +82,15 @@ const TimelineItem = ({ data, index, isLast }) => {
       {/* Center timeline */}
       <div className="col-span-1 flex flex-col items-center relative">
         {/* Vertical line (full height) */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-1 bg-f1-red/50 z-0" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-1 bg-mercedes-teal/50 z-0" />
         {/* Year above dot */}
-        <span className="text-2xl font-bold text-f1-red select-none mb-2 mt-2 bg-f1-black px-2 rounded-md z-10">{data.year}</span>
+        <span className="text-2xl font-bold text-mercedes-teal select-none mb-2 mt-2 bg-mercedes-black px-2 rounded-md z-10">{data.year}</span>
         {/* Dot */}
-        <div className="w-7 h-7 bg-f1-black border-2 border-f1-red rounded-full z-20 flex items-center justify-center mb-2">
-          <div className="w-3 h-3 bg-f1-red rounded-full" />
+        <div className="w-7 h-7 bg-mercedes-black border-2 border-mercedes-teal rounded-full z-20 flex items-center justify-center mb-2">
+          <div className="w-3 h-3 bg-mercedes-teal rounded-full" />
         </div>
         {/* Line below dot (not for last item) */}
-        {!isLast && <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-1 bg-f1-red/50 z-0" style={{height: '50%'}} />}
+        {!isLast && <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-1 bg-mercedes-teal/50 z-0" style={{height: '50%'}} />}
       </div>
       {/* Right card */}
       <div className={`col-span-4 flex justify-start items-center ${!isLeft ? '' : 'invisible md:visible'}`}>
@@ -100,18 +100,18 @@ const TimelineItem = ({ data, index, isLast }) => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={variants}
-            whileHover={{ scale: 1.03, boxShadow: '0 4px 24px #E1060033' }}
+            whileHover={{ scale: 1.03, boxShadow: '0 4px 24px #00A19B33' }}
             className="glass-card p-6 relative transition-all duration-300 cursor-pointer hover:shadow-2xl w-full max-w-xl text-left"
           >
-            <div className="absolute -top-6 left-8 w-10 h-10 glass-card rounded-full flex items-center justify-center text-2xl border-2 border-f1-red bg-f1-black z-20">
+            <div className="absolute -top-6 left-8 w-10 h-10 glass-card rounded-full flex items-center justify-center text-2xl border-2 border-mercedes-teal bg-mercedes-black z-20">
               {data.icon}
             </div>
-            <h3 className="text-2xl font-bold mb-2 text-f1-red">{data.title}</h3>
-            <p className="text-f1-gold mb-2 font-semibold">{data.location}</p>
-            <p className="text-f1-white/80 mb-2 whitespace-pre-line">{data.description}</p>
+            <h3 className="text-2xl font-bold mb-2 text-mercedes-teal">{data.title}</h3>
+            <p className="text-mercedes-silver mb-2 font-semibold">{data.location}</p>
+            <p className="text-mercedes-silver mb-2 whitespace-pre-line">{data.description}</p>
             <div className="flex flex-wrap gap-2 mt-2 justify-start">
               {data.tech && data.tech.map((tech) => (
-                <span key={tech} className="text-xs bg-f1-red/80 text-f1-white px-2 py-1 rounded-md font-semibold shadow">
+                <span key={tech} className="text-xs bg-mercedes-teal/80 text-mercedes-black px-2 py-1 rounded-md font-semibold shadow">
                   {tech}
                 </span>
               ))}
@@ -135,7 +135,7 @@ const Timeline = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">My Journey</h2>
-          <p className="text-f1-white/80 max-w-2xl mx-auto">
+          <p className="text-mercedes-silver max-w-2xl mx-auto">
             A timeline of my educational and professional journey in technology and software development.
           </p>
         </motion.div>

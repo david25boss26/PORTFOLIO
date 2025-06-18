@@ -13,6 +13,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import RightSocialBar from './components/RightSocialBar';
 import ButtonAnimeEffect from './components/ButtonAnimeEffect';
 import Timeline from './components/Timeline';
+import SkillsVisualization from './components/SkillsVisualization';
 import anime from 'animejs';
 
 function AnimatedRoutes() {
@@ -41,6 +42,7 @@ function AnimatedRoutes() {
               <Services />
               <Projects />
               <Timeline />
+              <SkillsVisualization />
               <About />
               <Contact />
             </>

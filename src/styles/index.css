@@ -4,25 +4,25 @@
 
 @layer base {
   body {
-    @apply bg-f1-black text-f1-white scroll-smooth;
+    @apply bg-mercedes-black text-mercedes-white scroll-smooth;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-f1-gray/30 backdrop-blur-glass border border-f1-white/10 rounded-lg;
+    @apply bg-mercedes-dark-gray/30 backdrop-blur-glass border border-mercedes-silver/10 rounded-lg;
   }
   
   .nav-link {
-    @apply text-f1-white hover:text-f1-red transition-colors duration-300;
+    @apply text-mercedes-white hover:text-mercedes-teal transition-colors duration-300;
   }
   
   .btn-primary {
-    @apply bg-f1-red text-f1-white px-6 py-2 rounded-md hover:bg-f1-red/80 transition-colors duration-300 shadow-lg backdrop-blur-glass;
+    @apply bg-mercedes-teal text-mercedes-white px-6 py-2 rounded-md hover:bg-mercedes-teal/80 transition-colors duration-300 shadow-lg backdrop-blur-glass;
   }
   
   .btn-secondary {
-    @apply border border-f1-white text-f1-white px-6 py-2 rounded-md hover:bg-f1-white/10 transition-colors duration-300 shadow-lg backdrop-blur-glass;
+    @apply border border-mercedes-white text-mercedes-white px-6 py-2 rounded-md hover:bg-mercedes-white/10 transition-colors duration-300 shadow-lg backdrop-blur-glass;
   }
   
   .btn-animated {
@@ -37,16 +37,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-f1-black;
+  @apply bg-mercedes-black;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-f1-red rounded-full;
+  @apply bg-mercedes-teal rounded-full;
 }
 
 /* Custom cursor */
 .custom-cursor {
-  @apply fixed w-8 h-8 rounded-full border-2 border-f1-red pointer-events-none z-50 transition-transform duration-100;
+  @apply fixed w-8 h-8 rounded-full border-2 border-mercedes-teal pointer-events-none z-50 transition-transform duration-100;
 }
 
 /* Dynamic gradient animation */
@@ -59,7 +59,7 @@
   }
 }
 .animate-gradient-move {
-  background: linear-gradient(120deg, #15151E 0%, #1E1E1E 40%, #E10600 100%);
+  background: linear-gradient(120deg, #000000 0%, #565F64 40%, #00A19B 100%);
   background-size: 200% 200%;
   animation: gradient-move 8s ease-in-out infinite;
 } 

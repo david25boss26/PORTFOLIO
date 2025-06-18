@@ -45,14 +45,14 @@ const SkillBar = ({ skill, id }) => {
     <div className="mb-6">
       <div className="flex justify-between mb-1">
         <span className="font-semibold text-base">{skill.name}</span>
-        <span className="text-f1-white/60 font-semibold">{skill.level}%</span>
+        <span className="text-mercedes-silver font-semibold">{skill.level}%</span>
       </div>
-      <div className="h-2.5 bg-f1-light-gray/60 rounded-full overflow-hidden relative">
+      <div className="h-2.5 bg-mercedes-silver/60 rounded-full overflow-hidden relative">
         <div
           ref={barRef}
           id={id}
           style={{ width: 0 }}
-          className="h-full bg-f1-red rounded-full transition-all absolute left-0 top-0"
+          className="h-full bg-mercedes-teal rounded-full transition-all absolute left-0 top-0"
         />
       </div>
     </div>
@@ -87,10 +87,10 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div ref={leftRef} className="opacity-0 translate-y-8">
             <h2 className="text-4xl font-bold mb-8">About Me</h2>
-            <p className="text-f1-white/80 mb-8 text-lg">
-              I'm a passionate developer with over 5 years of experience in building software and engineering solutions. My approach combines user-centered design principles with modern technology to deliver solutions that not only look great but also solve real problems.
+            <p className="text-mercedes-silver mb-8 text-lg">
+            I'm a passionate final-year software engineering student with hands-on experience in building real-world applications and innovative solutions. I focus on combining user-centered design principles with modern technologies to create software that not only looks great but also solves meaningful problems.
             </p>
-            <p className="text-f1-white/80 mb-10 text-lg">
+            <p className="text-mercedes-silver mb-10 text-lg">
               When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through writing and speaking engagements.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -105,7 +105,7 @@ const About = () => {
           >
             <div className="glass-card p-8 flex-1 min-w-[220px] max-w-full md:max-w-[340px] mx-auto flex flex-col shadow-lg">
               <div className="flex items-center gap-2 mb-4">
-                <FaCode className="text-f1-gold text-2xl" />
+                <FaCode className="text-mercedes-teal text-2xl" />
                 <h3 className="text-2xl font-bold">Programming Skills</h3>
               </div>
               {programmingSkills.map((skill, idx) => (
@@ -114,7 +114,7 @@ const About = () => {
             </div>
             <div className="glass-card p-8 flex-1 min-w-[220px] max-w-full md:max-w-[340px] mx-auto flex flex-col shadow-lg">
               <div className="flex items-center gap-2 mb-4">
-                <FaCogs className="text-f1-gold text-2xl" />
+                <FaCogs className="text-mercedes-teal text-2xl" />
                 <h3 className="text-2xl font-bold">Technical Skills</h3>
               </div>
               {technicalSkills.map((skill, idx) => (

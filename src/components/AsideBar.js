@@ -8,7 +8,7 @@ const AsideBar = () => {
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="hidden lg:flex flex-col fixed top-0 left-0 h-full w-24 z-40 glass-card backdrop-blur-glass bg-f1-black/60 border-r border-f1-white/10 shadow-lg"
+      className="hidden lg:flex flex-col fixed top-0 left-0 h-full w-24 z-40 glass-card backdrop-blur-glass bg-mercedes-black/60 border-r border-mercedes-silver/10 shadow-lg"
     >
       <nav className="flex flex-col items-center mt-24 space-y-8">
         <Link to="/" className="nav-link text-xl">🏠</Link>

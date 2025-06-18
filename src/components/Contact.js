@@ -8,17 +8,17 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/david-sharma-75a778286/',
-    icon: <FaLinkedin className="text-2xl text-f1-white" />,
+    icon: <FaLinkedin className="text-2xl text-mercedes-silver" />,
   },
   {
     name: 'GitHub',
     url: 'https://github.com/david25boss26',
-    icon: <FaGithub className="text-2xl text-f1-white" />,
+    icon: <FaGithub className="text-2xl text-mercedes-silver" />,
   },
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/davidsharma_04/',
-    icon: <FaInstagram className="text-2xl text-f1-white" />,
+    icon: <FaInstagram className="text-2xl text-mercedes-silver" />,
   },
 ];
 
@@ -122,7 +122,7 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
-          <p className="text-f1-white/80 max-w-2xl mx-auto">
+          <p className="text-mercedes-silver max-w-2xl mx-auto">
             Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
           </p>
         </motion.div>
@@ -139,7 +139,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-f1-black/40 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red"
+                  className="w-full px-4 py-2 bg-mercedes-black/40 border border-mercedes-silver/10 rounded-md focus:outline-none focus:border-mercedes-teal"
                 />
               </div>
               <div>
@@ -151,7 +151,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-f1-black/40 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red"
+                  className="w-full px-4 py-2 bg-mercedes-black/40 border border-mercedes-silver/10 rounded-md focus:outline-none focus:border-mercedes-teal"
                 />
               </div>
               <div>
@@ -163,7 +163,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-f1-black/40 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red"
+                  className="w-full px-4 py-2 bg-mercedes-black/40 border border-mercedes-silver/10 rounded-md focus:outline-none focus:border-mercedes-teal"
                 />
               </div>
               <div>
@@ -175,7 +175,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className="w-full px-4 py-2 bg-f1-black/40 border border-f1-white/10 rounded-md focus:outline-none focus:border-f1-red"
+                  className="w-full px-4 py-2 bg-mercedes-black/40 border border-mercedes-silver/10 rounded-md focus:outline-none focus:border-mercedes-teal"
                 ></textarea>
               </div>
               <button
@@ -202,7 +202,7 @@ const Contact = () => {
                     <span className="text-2xl">📧</span>
                   </div>
                   <div>
-                    <p className="text-sm text-f1-white/60">Email</p>
+                    <p className="text-sm text-mercedes-silver">Email</p>
                     <p className="font-medium">sharmadavid2004@gmail.com</p>
                   </div>
                 </div>
@@ -211,7 +211,7 @@ const Contact = () => {
                     <span className="text-2xl">📱</span>
                   </div>
                   <div>
-                    <p className="text-sm text-f1-white/60">Phone</p>
+                    <p className="text-sm text-mercedes-silver">Phone</p>
                     <p className="font-medium">9540491777</p>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ const Contact = () => {
                     <span className="text-2xl">🏠</span>
                   </div>
                   <div>
-                    <p className="text-sm text-f1-white/60">Address</p>
+                    <p className="text-sm text-mercedes-silver">Address</p>
                     <p className="font-medium">C 450 BLOCK C SECTOR P3 GREATER NOIDA</p>
                   </div>
                 </div>
@@ -237,7 +237,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.name}
-                    className="w-12 h-12 flex items-center justify-center rounded-full bg-f1-black/40 hover:bg-f1-red transition-colors duration-300 shadow-lg"
+                    className="w-12 h-12 flex items-center justify-center rounded-full bg-mercedes-black/40 hover:bg-mercedes-teal transition-colors duration-300 shadow-lg"
                   >
                     {s.icon}
                   </a>
@@ -261,8 +261,8 @@ const Contact = () => {
             <span className="text-2xl">💬</span>
           </div>
           <div>
-            <p className="text-sm text-f1-white/60">Let's Talk</p>
-            <a href="mailto:sharmadavid2004@gmail.com" className="font-medium underline hover:text-f1-red transition-colors duration-300 pointer-events-auto">sharmadavid2004@gmail.com</a>
+            <p className="text-sm text-mercedes-silver">Let's Talk</p>
+            <a href="mailto:sharmadavid2004@gmail.com" className="font-medium underline hover:text-mercedes-teal transition-colors duration-300 pointer-events-auto">sharmadavid2004@gmail.com</a>
           </div>
         </div>
       </motion.div>

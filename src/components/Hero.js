@@ -59,7 +59,7 @@ const Hero = () => {
         anime({
           targets: ref.current,
           scale: 1.08,
-          boxShadow: '0 0 16px 2px #E10600AA',
+          boxShadow: '0 0 16px 2px #00A19BAA',
           duration: 200,
           easing: 'easeOutQuad',
         });
@@ -68,7 +68,7 @@ const Hero = () => {
         anime({
           targets: ref.current,
           scale: 1,
-          boxShadow: '0 0 0 0 #E1060000',
+          boxShadow: '0 0 0 0 #00A19B00',
           duration: 200,
           easing: 'easeOutQuad',
         });
@@ -84,9 +84,9 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div ref={leftRef} className="opacity-0 translate-y-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Hi, I'm <span className="text-f1-red">David Sharma</span>
+              Hi, I'm <span className="text-mercedes-teal">David Sharma</span>
             </h1>
-            <p className="text-lg text-f1-white/80 mb-8">
+            <p className="text-lg text-mercedes-silver mb-8">
               Welcome to my portfolio. Explore my projects, skills, and experience in software development and engineering.
             </p>
             <div className="flex space-x-4">
@@ -94,8 +94,8 @@ const Hero = () => {
               <button ref={contactBtnRef} className="btn-secondary glass-card btn-animated" onClick={handleContact}>Contact Me</button>
             </div>
             <div className="mt-12 glass-card p-6 inline-block">
-              <p className="text-4xl font-bold text-f1-gold">Final Year</p>
-              <p className="text-f1-white/80">Computer Science Student</p>
+              <p className="text-4xl font-bold text-mercedes-teal">Final Year</p>
+              <p className="text-mercedes-silver">Computer Science Student</p>
             </div>
           </div>
           

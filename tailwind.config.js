@@ -6,12 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'f1-red': '#E10600',
-        'f1-black': '#15151E',
-        'f1-white': '#FFFFFF',
-        'f1-gold': '#FFD700',
-        'f1-gray': '#1E1E1E',
-        'f1-light-gray': '#2A2A2A',
+        'mercedes-black': '#000000',
+        'mercedes-silver': '#C8CCCE',
+        'mercedes-dark-gray': '#565F64',
+        'mercedes-teal': '#00A19B',
+        'mercedes-white': '#FFFFFF',
       },
       fontFamily: {
         'f1': ['Formula1', 'sans-serif'],
