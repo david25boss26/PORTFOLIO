@@ -14,6 +14,7 @@ import RightSocialBar from './components/RightSocialBar';
 import ButtonAnimeEffect from './components/ButtonAnimeEffect';
 import Timeline from './components/Timeline';
 import SkillsVisualization from './components/SkillsVisualization';
+import Experience from './components/Experience';
 import anime from 'animejs';
 
 function AnimatedRoutes() {
@@ -43,6 +44,7 @@ function AnimatedRoutes() {
               <Projects />
               <Timeline />
               <SkillsVisualization />
+              <Experience />
               <About />
               <Contact />
             </>
@@ -50,6 +52,7 @@ function AnimatedRoutes() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

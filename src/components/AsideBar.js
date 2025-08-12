@@ -7,6 +7,7 @@ const navItems = [
   { to: '/about', icon: '👤', label: 'About' },
   { to: '/services', icon: '💼', label: 'Services' },
   { to: '/projects', icon: '📁', label: 'Projects' },
+  { to: '/experience', icon: '🏆', label: 'Experience' },
   { to: '/resume', icon: '📄', label: 'Resume' },
   { to: '/contact', icon: '✉️', label: 'Contact' },
 ];
